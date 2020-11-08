@@ -16,10 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 //    return view('welcome');
-    $post=new Post();
-    $post->title ='test title';
-    $post->content='test content';
-    $post->save();
+//    $post=new Post();
+//    $post->title ='test title';
+//    $post->content='test content';
+//    $post->save();
+
+    Post::create([
+        'title'=>'test title2',
+        'content'=>'test content2'
+    ]);
+
 });
 
 Route::get('posts', [\App\Http\Controllers\PostsController::class, 'index'])->name('posts.index');
