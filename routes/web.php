@@ -51,7 +51,19 @@ Route::get('/', function () {
 
 //    Post::destroy(2);
 
-    Post::destroy(3, 5, 7);
+//    Post::destroy(3, 5, 7);
+
+//    $allPosts=Post::all();
+//    dd($allPosts);
+
+//    $featurePosts=Post::where('is_feature',1)->get();
+//    dd($featurePosts);
+
+//    $fourthPost=Post::find(4);
+//    dd($fourthPost);
+
+    $lastPost=Post::orderBy('id', 'DESC')->first();
+    dd($lastPost);
 
 });
 
