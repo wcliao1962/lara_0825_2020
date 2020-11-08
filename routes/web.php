@@ -25,8 +25,11 @@ Route::get('/', function () {
 //        'title'=>'test title2',
 //        'content'=>'test content2'
 //    ]);
-    
-    $post=\App\Models\Post::all();
+
+//    $post=\App\Models\Post::all();
+//    dd($post);
+
+    $post=Post::find(1);
     dd($post);
 
 });
