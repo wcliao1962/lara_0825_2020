@@ -41,10 +41,17 @@ Route::get('/', function () {
 //        'content'=>'updated content'
 //    ]);
 
-    $post= Post::find(1);
-    $post->title = 'saved title';
-    $post->content = 'saved content';
-    $post->save();
+//    $post= Post::find(1);
+//    $post->title = 'saved title';
+//    $post->content = 'saved content';
+//    $post->save();
+
+//    $post=Post::find(1);
+//    $post->delete();
+
+//    Post::destroy(2);
+
+    Post::destroy(3, 5, 7);
 
 });
 
