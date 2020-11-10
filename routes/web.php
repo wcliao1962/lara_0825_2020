@@ -65,7 +65,8 @@ Route::get('/', function () {
 //    $lastPost=Post::orderBy('id', 'DESC')->first();
 //    dd($lastPost);
 
-    $post=Post::find(6);
+    $post=Post::find(3);
+    echo $post->title.'<br><hr>';
     foreach ($post->comments as $comment){
         echo $comment->content.'<br>';
     }
